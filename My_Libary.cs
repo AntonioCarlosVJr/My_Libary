@@ -11,8 +11,12 @@ namespace Programa{
 		static void Main(string[] args){
 			
 			try {
-					//string arquivo = "/home/antonio/Área de trabalho/Programação_C#/MyBooks/lista_livros.csv";
-					string arquivo = "/home/antonio/Área de trabalho/Programação_C#/MyBooks/livros.csv";
+				
+					//string arquivo = "/home/antonio/Área de trabalho/Programação_C#/MyBooks/livros.csv";
+				
+					Console.Write("Digite o Caminho do arquivo CSV: ");
+					string arquivo = Console.ReadLine();
+				
 					ValidaCaminho(arquivo);
 					
 					int opcao = 0; 
@@ -101,6 +105,8 @@ namespace Programa{
 			//Validador do Caminho do Arquivo
 			
 			public static void ValidaCaminho(string arquivo){
+				
+					Console.WriteLine("O Caminho é: " + arquivo);
 					
 					if (File.Exists(arquivo)){
 						
